@@ -321,3 +321,49 @@
 
   * **Code:** 404 NOT FOUND <br />
     **Content:** `{"message": "Unable to cancel booking, booking 1 not found"}`
+
+### Return room booking report
+
+* **URL**
+
+  /api/bookings/report
+
+* **Method:**
+
+  `GET`
+
+
+**Example:**
+
+`/api/bookings/report`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** <br />
+
+```json
+{
+  "message": "report generated",
+  "data": [
+    {
+      "id": 1,
+      "name": "Penthouse",
+      "booking_count": 2,
+      "average_booking_duration": 14
+    },
+    {
+      "id": 2,
+      "name": "Basement",
+      "booking_count": 0,
+      "average_booking_duration": 0
+    },
+    {
+      "id": 3,
+      "name": "The high roller suite",
+      "booking_count": 1,
+      "average_booking_duration": 3
+    }
+  ]
+}
+```
